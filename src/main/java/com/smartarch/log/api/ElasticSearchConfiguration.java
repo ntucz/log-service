@@ -1,4 +1,4 @@
-package com.smartarch.log.bean;
+package com.smartarch.log.api;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

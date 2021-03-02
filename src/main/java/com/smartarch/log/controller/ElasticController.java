@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.smartarch.log.IConst;
+import com.smartarch.log.api.IConst;
 import com.smartarch.log.api.IElasticService;
 import com.smartarch.log.bean.LogMessage;
 
@@ -35,9 +35,9 @@ public class ElasticController {
 
   }
 
-  @GetMapping("/all")
-  public Iterator<LogMessage> all(){
-      return elasticService.findAll();
-  }
+	/*
+	 * @GetMapping("/all") public Iterator<LogMessage> all(){ return
+	 * elasticService.findAll(); }
+	 */
 
 }

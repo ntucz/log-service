@@ -1,4 +1,4 @@
-package com.smartarch.log;
+package com.smartarch.log.api;
 
 public interface IConst {
 	Integer LOG_TYPE_OPER = 0;

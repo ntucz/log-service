@@ -76,18 +76,10 @@ public class ElasticServiceImpl implements IElasticService {
         return elasticRepository.findByContent(content,pageable);
     }
 
-    @Override
-    public Page<LogMessage> findByFirstCode(String firstCode) {
-        return elasticRepository.findByFirstCode(firstCode,pageable);
-    }
+	@Override
+	public Page<LogMessage> query(String key) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
-    @Override
-    public Page<LogMessage> findBySecordCode(String secordCode) {
-        return elasticRepository.findBySecordCode(secordCode,pageable);
-    }
-
-    @Override
-    public Page<LogMessage> query(String key) {
-        return elasticRepository.findByContent(key,pageable);
-    }
 }

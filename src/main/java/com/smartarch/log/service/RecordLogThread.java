@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ArrayBlockingQueue;
 
-import com.smartarch.log.IConst;
+import com.smartarch.log.api.IConst;
 import com.smartarch.log.bean.LogMessage;
 
 import lombok.extern.log4j.Log4j2;
@@ -55,7 +55,13 @@ public class RecordLogThread {
 		if (list == null || list.isEmpty()) {
 			return list;
 		}
-		return handler.insertLog(list);
+		try {
+			handler.insertLog(list);
+			return null;
+		} catch (Exception e) {
+			log.error("insert log error:{}", e);
+			return list;
+		}
 	}
 
 	private void handleFailedList(List<LogMessage> fails) {

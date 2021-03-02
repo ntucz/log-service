@@ -8,8 +8,7 @@ import org.springframework.data.elasticsearch.repository.ElasticsearchRepository
 import com.smartarch.log.bean.LogMessage;
 public interface ElasticRepository extends ElasticsearchRepository<LogMessage, Long> {
 
-    //默认的注释
-    //@Query("{\"bool\" : {\"must\" : {\"field\" : {\"content\" : \"?\"}}}}")
+    @Query("{\"bool\" : {\"must\" : {\"field\" : {\"content\" : \"?\"}}}}")
     Page<LogMessage> findByContent(String content, Pageable pageable);
 
     @Query("{\"bool\" : {\"must\" : {\"field\" : {\"firstCode.keyword\" : \"?\"}}}}")

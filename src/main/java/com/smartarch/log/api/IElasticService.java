@@ -21,9 +21,5 @@ public interface IElasticService {
 
     Page<LogMessage> findByContent(String content);
 
-    Page<LogMessage> findByFirstCode(String firstCode);
-
-    Page<LogMessage> findBySecordCode(String secordCode);
-
     Page<LogMessage> query(String key);
 }
