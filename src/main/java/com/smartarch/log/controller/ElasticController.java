@@ -2,7 +2,6 @@ package com.smartarch.log.controller;
 
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.Iterator;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,9 +9,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.smartarch.log.api.IConst;
 import com.smartarch.log.api.IElasticService;
-import com.smartarch.log.bean.LogMessage;
+import com.smartarch.platform.log.api.IConst;
+import com.smartarch.platform.log.bean.LogMessage;
 
 import lombok.extern.log4j.Log4j2;
 

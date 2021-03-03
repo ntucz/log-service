@@ -1,9 +1,7 @@
 package com.smartarch.log.api;
 
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -11,12 +9,10 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate;
 import org.springframework.data.elasticsearch.core.IndexOperations;
-import org.springframework.data.elasticsearch.core.document.Document;
-import org.springframework.data.elasticsearch.core.mapping.IndexCoordinates;
 import org.springframework.stereotype.Service;
 
-import com.smartarch.log.bean.LogMessage;
 import com.smartarch.log.dao.ElasticRepository;
+import com.smartarch.platform.log.bean.LogMessage;
 
 @Service
 public class ElasticServiceImpl implements IElasticService {

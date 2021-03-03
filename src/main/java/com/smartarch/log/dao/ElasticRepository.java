@@ -5,7 +5,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.elasticsearch.annotations.Query;
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
 
-import com.smartarch.log.bean.LogMessage;
+import com.smartarch.platform.log.bean.LogMessage;
 public interface ElasticRepository extends ElasticsearchRepository<LogMessage, Long> {
 
     @Query("{\"bool\" : {\"must\" : {\"field\" : {\"content\" : \"?\"}}}}")

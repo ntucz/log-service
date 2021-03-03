@@ -5,7 +5,7 @@ import java.util.List;
 
 import org.springframework.data.domain.Page;
 
-import com.smartarch.log.bean.LogMessage;
+import com.smartarch.platform.log.bean.LogMessage;
 
 public interface IElasticService {
 
